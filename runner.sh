@@ -1,17 +1,3 @@
-#!/bin/bash
-#$ -l h_rt=240:0:0
-#$ -l h_vmem=11G
-#$ -pe smp 8
-#$ -l gpu=1
-#$ -l gpu_type=ampere
-#$ -cwd
-#$ -j y
-#$ -l rocky
-
-# Set environment
-module load miniforge
-mamba activate Fairness
-
 CUDA_VISIBLE_DEVICES='0' python main.py \
     --workers 8 \
     --pre-train-epochs 15 \
@@ -28,8 +14,8 @@ CUDA_VISIBLE_DEVICES='0' python main.py \
     --sensitive-attribute "Male" \
     --bias-degree "1/9" \
     --image-size 224 \
-    --real-data-path "/data/EECS-IoannisLab/datasets/img_align_celeba/" \
-    --synthetic-data-root "/data/scratch/acw717/synthetic_data/" \
+    --real-data-path "./datasets/img_align_celeba/" \
+    --synthetic-data-root "./synthetic_data_path/" \
     --number-train-data-real 20000 \
     --number-balanced-synthetic-0-0 5000 \
     --number-balanced-synthetic-0-1 5000 \

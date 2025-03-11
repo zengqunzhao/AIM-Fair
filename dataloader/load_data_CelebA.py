@@ -193,8 +193,8 @@ class Dataloader_CelebA_RealAndSynthetic(Dataset):
 if __name__ == "__main__":
     
     train_data = Dataloader_CelebA_Real(mode="train",
-                                        dataset_path="/data/EECS-IoannisLab/datasets/img_align_celeba/",
-                                        annotation_path="/data/home/acw717/code/Fairness_Attributes/annotations/CelebA_Train_Smiling_Male_2000_0.05.csv",
+                                        dataset_path="/datasets/img_align_celeba/",
+                                        annotation_path="/annotations/CelebA_Train_Smiling_Male_20000_0.05.csv",
                                         target="Smiling", 
                                         sensitive="Male", 
                                         img_size=224)
