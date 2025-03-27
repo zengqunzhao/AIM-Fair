@@ -22,15 +22,17 @@ Download the CelebA dataset from [this link](https://mmlab.ie.cuhk.edu.hk/projec
 
 ### Synthetic Data
 
-The image generation code is based on the[ Stable Difussion](https://github.com/Stability-AI/stablediffusion), which is in `./stable_diffusion`
+The image generation process is based on [Stable Difussion](https://github.com/Stability-AI/stablediffusion), located in the `./stable_diffusion`
 
-Run `generation.sh` to genereta balanced synthetic data. The target attribute and protected attritbute is defined by `--target-sensitive`
+To generate balanced synthetic data, run: `./stable_diffusion/generation.sh`
 
-We have provided the contextual prompts in `./stable_diffusion/scripts`
+Specify the target attribute and protected attribute using the `--target-sensitive` flag
+
+We provide contextual prompts for image generation in `./stable_diffusion/scripts`
 
 ## Model Training
 
-Modify --real-data-path --synthetic-data-root and run `runner.sh`
+To train the model, modify the --real-data-path and --synthetic-data-root arguments accordingly, then run: `runner.sh`
 
 ## Citation
 
