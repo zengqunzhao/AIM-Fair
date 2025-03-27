@@ -32,7 +32,7 @@ We provide contextual prompts for image generation in `./stable_diffusion/script
 
 ## Model Training
 
-To train the model, modify the --real-data-path and --synthetic-data-root arguments accordingly, then run: `runner.sh`
+To train the model, modify the `--real-data-path` and `--synthetic-data-root` arguments accordingly, then run: `runner.sh`
 
 ## Citation
 
