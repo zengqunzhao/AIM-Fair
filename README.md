@@ -16,13 +16,11 @@
 
 ## Data Preparation
 
-#### True Data
+### True Data
 
-Download the CelebA dataset from [this link](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8?resourcekey=0-5BR16BdXnb8hVj6CNHKzLg) and the UTKFace dataset from [this link](https://susanqq.github.io/UTKFace/).
+Download the CelebA dataset from [this link](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and the UTKFace dataset from [this link](https://susanqq.github.io/UTKFace/)
 
-Modify `--real-data-path` in `runner.sh`
-
-#### Synthetic Data
+### Synthetic Data
 
 The image generation code is based on the[ Stable Difussion](https://github.com/Stability-AI/stablediffusion), which is in `./stable_diffusion`
 
@@ -32,6 +30,7 @@ We have provided the contextual prompts in `./stable_diffusion/scripts`
 
 ## Model Training
 
+Modify --real-data-path --synthetic-data-root and run `runner.sh`
 
 ## Citation
 
