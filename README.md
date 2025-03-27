@@ -12,8 +12,29 @@
     <img src="./images/structure.png" alt="svg" width="750"/>
 </p>
 
-## Updates
-We will release more details about training and data generation later.
+## Usage
+
+### Data Preparation
+
+#### True Data
+
+Download the CelebA dataset from [this link](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8?resourcekey=0-5BR16BdXnb8hVj6CNHKzLg) and the UTKFace dataset from [this link](https://susanqq.github.io/UTKFace/).
+
+Modify `--real-data-path` in `runner.sh`
+
+#### Synthetic Data
+
+The image generation code is based on the[ Stable Difussion](https://github.com/Stability-AI/stablediffusion), which is in `./stable_diffusion`
+
+Using Run.sh to genereta balanced synthetic data. The target attribute and protected attritbute is defined by `--target-sensitive`
+
+We have provide the contextual prompts in `./stable_diffusion/scripts`
+
+### Pre-Training
+
+
+### Fine-Tuning
+
 
 ## Citation
 If you find our work useful, please consider citing our paper:
